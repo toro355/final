@@ -1,4 +1,4 @@
-pipeline {
+pipeline 
     agent any
     environment {
         DOCKN = 'finalapp'
@@ -22,4 +22,4 @@ pipeline {
             }
         }
 }
-        
+
