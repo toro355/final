@@ -15,11 +15,19 @@ pipeline
                        sh("docker build -t $IMG .")
                    }
                    else{
-                       echo 'image already exists no need to make new one '
+                       echo 'image already exists no need to make new one'
 
                    }
                }
             }
+        }
+        stage('run docker container')
+        {
+         script
+         {
+           sh("docker run $IMG")
+         }
+
         }
 }
 
